@@ -5,7 +5,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel landing page</title>
+    <meta
+      name="description"
+      content="Bon Voyage - Your trusted travel companion for the best destinations around the world. Book flights, hotels, and amazing travel experiences."
+    />
+    <meta
+      name="keywords"
+      content="travel, vacation, flights, hotels, tourism, destinations"
+    />
+    <meta name="author" content="Bon Voyage" />
+    <meta property="og:title" content="Bon Voyage - Travel & Tourism" />
+    <meta
+      property="og:description"
+      content="Discover amazing destinations and book your next adventure with Bon Voyage"
+    />
+    <meta property="og:image" content="./img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <title>Bon Voyage - Travel & Tourism</title>
     <!-- ! link CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -15,33 +31,33 @@
       <!-- ? nav starts here -->
       <nav>
         <div class="logo">
-          <a href="http://guvi.com/">Bon Voyage</a>
+          <a href="/" aria-label="Bon Voyage Home">Bon Voyage</a>
         </div>
         <div class="nav-list">
           <ul>
             <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer"
-                >Desitnations</a
+              <a href="/destinations" target="_blank" rel="noopener noreferrer"
+                >Destinations</a
               >
             </li>
             <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer"
+              <a href="/hotels" target="_blank" rel="noopener noreferrer"
                 >Hotels</a
               >
             </li>
             <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer"
+              <a href="/flights" target="_blank" rel="noopener noreferrer"
                 >Flights</a
               >
             </li>
             <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer"
+              <a href="/bookings" target="_blank" rel="noopener noreferrer"
                 >Bookings</a
               >
             </li>
             <li>
               <a
-                href="http://"
+                href="/login"
                 class="btn-orange"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -50,7 +66,7 @@
             </li>
             <li>
               <a
-                href="http://"
+                href="/signup"
                 class="btn-orange"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -62,9 +78,11 @@
       </nav>
       <!-- ? text box -->
       <div class="text-box">
-        <h1>Travel,enjoy and live a new and full life</h1>
-        <h2>best destinations around the world</h2>
-        <button type="submit">Find out more</button>
+        <h1>Travel, enjoy and live a new and full life</h1>
+        <h2>Best destinations around the world</h2>
+        <button type="button" aria-label="Find out more about our services">
+          Find out more
+        </button>
       </div>
     </header>
     <!-- todo header ends here  -->
@@ -74,20 +92,19 @@
       <!-- ? category container start -->
       <div class="category-container">
         <p>CATEGORY</p>
-        <h1>We offer Best Services</h1>
+        <h1>We Offer Best Services</h1>
         <div class="category-cards-row">
           <!-- space -->
           <div class="card-col">
             <div class="content-card">
               <img
                 src="./img/antenna.svg"
-                width="107.902px"
-                height="97.762px"
-                alt="antenna-image"
-                srcset=""
+                width="107.902"
+                height="97.762"
+                alt="Weather forecast icon"
               />
               <h2>Calculated Weather</h2>
-              <p>As much of information possible with the weather</p>
+              <p>Get detailed weather information for your destination</p>
             </div>
           </div>
           <!-- space  -->
@@ -346,15 +363,28 @@
             Subscribe to get information, latest news and other interesting
             offers at Bon Voyage
           </h2>
-          <form class="email-subscribe">
+          <form class="email-subscribe" action="/subscribe" method="POST">
             <label for="email">
-              <img src="./img/mail-icon.svg" alt="email-icon" srcset="" />
+              <img src="./img/mail-icon.svg" alt="Email icon" />
               <p>Your email</p>
             </label>
-            <input type="email" name="email" id="email" />
-            <input type="button" class="sub-button" value="Subscribe" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Enter your email"
+              aria-label="Email subscription"
+            />
+            <button
+              type="submit"
+              class="sub-button"
+              aria-label="Subscribe to newsletter"
+            >
+              Subscribe
+            </button>
           </form>
-          <img src="./img/send-icon-color.svg" alt="send-icon" />
+          <img src="./img/send-icon-color.svg" alt="Send icon" />
         </div>
       </div>
       <!-- ? rectangle input container end -->
@@ -372,40 +402,52 @@
           <div class="company contents">
             <h1>Company</h1>
             <span>
-              <p>About</p>
-              <p>Careers</p>
-              <p>Mobile</p>
+              <a href="/about.html">About</a>
             </span>
           </div>
           <div class="contact contents">
             <h1>Contact</h1>
             <span>
-              <p>Help/FAQ</p>
-              <p>Airlinefees</p>
-              <p>Affilates</p>
-            </span>
-          </div>
-          <div class="more contents">
-            <h1>More</h1>
-            <span>
-              <p>Airlinefees</p>
-              <p>Airline</p>
-              <p>Low fare tips</p>
+              <p><a href="/support.html">Help/FAQ</a></p>
+              <p><a href="/support.html">Technical Support</a></p>
+              <p>
+                Email:
+                <a href="mailto:buiquoctuan53199898@gmail.com"
+                  >buiquoctuan53199898@gmail.com</a
+                >
+              </p>
+              <p>Phone: <a href="tel:+84363976754">+84 363976754</a></p>
+              <p>Hours: Mon-Fri 9AM-6PM EST</p>
             </span>
           </div>
         </div>
         <div class="discover-app">
           <div class="social-icons">
-            <img src="./img/face-book.svg" alt="facebook-icon" srcset="" />
-            <span>
-              <img src="./img/insta-bg.png" alt="instagram-icon-bg" srcset="" />
-              <img
-                src="./img/instagram.svg"
-                class="insta-icon"
-                alt="instagram-icon"
-              />
-            </span>
-            <img src="./img/twitter.svg" alt="twitter-icon" srcset="" />
+            <a
+              href="https://facebook.com/bonvoyage"
+              aria-label="Follow us on Facebook"
+            >
+              <img src="./img/face-book.svg" alt="Facebook icon" />
+            </a>
+            <a
+              href="https://instagram.com/bonvoyage"
+              aria-label="Follow us on Instagram"
+            >
+              <span>
+                <img src="./img/insta-bg.png" alt="Instagram background" />
+                <img
+                  src="./img/instagram.svg"
+                  class="insta-icon"
+                  alt="Instagram icon"
+                />
+              </span>
+            </a>
+            <a
+              href="https://twitter.com/bonvoyage"
+              aria-label="Follow us on Twitter"
+            >
+              <img src="./img/twitter.svg" alt="Twitter icon" />
+            </a>
           </div>
           <h2>Discover our app</h2>
           <div class="store-button">
